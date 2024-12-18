@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengatur Uang Kas Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pengatur Uang Kas Mahasiswa</h1>
+        <div class="form-section">
+            <h2>Tambah Mahasiswa</h2>
+            <form id="add-student-form">
+                <input type="text" id="name" placeholder="Nama Mahasiswa" required>
+                <input type="number" id="initial-balance" placeholder="Saldo Awal" required>
+                <button type="submit">Tambah Mahasiswa</button>
+            </form>
+        </div>
+        <div class="form-section">
+            <h2>Tambah / Tarik Saldo</h2>
+            <form id="manage-balance-form">
+                <input type="text" id="name-balance" placeholder="Nama Mahasiswa" required>
+                <input type="number" id="amount" placeholder="Jumlah" required>
+                <select id="action">
+                    <option value="add">Tambah Saldo</option>
+                    <option value="withdraw">Tarik Saldo</option>
+                </select>
+                <button type="submit">Kelola Saldo</button>
+            </form>
+        </div>
+        <div class="data-section">
+            <h2>Data Mahasiswa</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Saldo</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Data mahasiswa akan ditambahkan di sini -->
+                </tbody>
+            </table>
+        </div>
+        <div class="total-section">
+            <button id="get-total">Tampilkan Total Saldo</button>
+            <button id="withdraw-all">Tarik Semua Saldo</button>
+            <p id="total-saldo"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
